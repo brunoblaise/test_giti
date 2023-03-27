@@ -298,7 +298,7 @@ def parse_contributions_calendar(contributions_calendar):
         # a valid line looks like this:
         # <rect width="11" height="11" x="-31" y="0" class="ContributionCalendar-day" data-date="2023-02-26" data-level="3" rx="2" ry="2">23 contributions on Sunday, February 26, 2023</rect>
         if 'data-date=' in line:
-            commit=  line.split('>')[1].split()[0] # yuck
+            commit = line.split('>')[1].split()[0] # yuck
 
             if commit.isnumeric():
                 yield int(commit)
